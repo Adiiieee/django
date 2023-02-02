@@ -1,0 +1,15 @@
+{% extends "./base.html" %}
+
+
+{% block main %}
+    <h3>Welcome to Polls App</h3>
+
+    {% if user.is_authenticated %}
+    <h3>Hello {{fname}}</h3>
+    <h4>You're successfully logged in.</h4>
+    <button type="submit"> <a href="/signout">SignOut</a></button>
+    {% else %}
+    <button type="submit"> <a href="/signup">Signup</a></button>
+    <button type="submit"> <a href="/signin">Login</a></button>
+    {% endif %}
+{% endblock %}
